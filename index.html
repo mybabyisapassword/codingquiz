@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <center>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Programming Quiz Game</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <style>
     body {
-      margin-top: 15%;
-      height: 100%;
-      width: 100%;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       background-image: url("image/background.png");
       background-position: center;
       background-size: cover;
@@ -33,7 +37,34 @@
 
     #score {
       font-size: 30px;
-      
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    select,
+    input[type="radio"] {
+      margin: 10px;
+    }
+
+    #game {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #choices {
+      margin: 10px 0;
+    }
+
+    button[type="button"] {
+      margin: 10px;
     }
   </style>
 </head>
@@ -76,6 +107,7 @@
     <button type="button" onclick="endGame()">End Game</button>
     <div id="score"></div>
   </div>
+
 
   <script src="script.js"></script>
   <script>
@@ -193,7 +225,7 @@
     function startGame() {
       currentDifficulty = document.querySelector('input[name="difficulty"]:checked').value;
       document.getElementById("form3").style.display = "none";
-      document.getElementById("game").style.display = "block";
+      document.getElementById("game").style.display = "flex";
       showQuestion();
     }
 
@@ -201,7 +233,7 @@
       const questionElement = document.getElementById("question");
       const choicesElement = document.getElementById("choices");
       const currentQuestion = quizData[currentLanguage][currentDifficulty][currentQuestionIndex];
-      
+
       questionElement.textContent = currentQuestion.question;
       choicesElement.innerHTML = '';
 
