@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <center>
+  <title>Programming Quiz Game</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    body {
+      margin-top: 15%;
+      height: 100%;
+      width: 100%;
+      background-image: url("image/background.png");
+      background-position: center;
+      background-size: cover;
+      font-family: rockwell;
+      font-size: 13px;
+      color: white;
+      text-align: center;
+    }
+
+    .button-style {
+      background-color: royalblue;
+      width: 200px;
+      height: 50px;
+      border-radius: 15px;
+      font-size: 25px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .button-style:hover {
+      background-color: red;
+    }
+
+    #score {
+      font-size: 30px;
+      
+    }
+  </style>
+</head>
+<body>
+  <form id="form1">
+    <h2>
+      <img src="image/gamelogo.jpg" alt="Game Logo" style="width: 150px; height: 150px;background-color: royalblue; border-radius: 50%;"><br><br>
+      <font size="5">Welcome To Indenticode!</font> <br><br><br>
+      To Enhance your knowledge in programming language<br><br>
+    </h2>
+    <button type="button" onclick="showForm2()" class="button-style">Start</button>
+  </form>
+
+  <form id="form2" style="display: none;">
+    <h2>Choose a Programming Language</h2>
+    <select id="languageSelect">
+      <option value="c">C</option>
+      <option value="python">Python</option>
+      <option value="javascript">JavaScript</option>
+    </select>
+    <button type="button" onclick="showForm3()">Next</button>
+  </form>
+
+  <form id="form3" style="display: none;">
+    <h2>Choose Difficulty</h2>
+    <input type="radio" name="difficulty" value="easy"> Easy
+    <input type="radio" name="difficulty" value="normal"> Normal
+    <input type="radio" name="difficulty" value="hard"> Hard
+    <button type="button" onclick="startGame()">Start Game</button>
+  </form>
+
+  <div id="game" style="display: none;">
+    <h2 id="question"></h2>
+    <form id="quizForm">
+      <div id="choices"></div>
+      <button type="button" onclick="checkAnswer()">Submit</button>
+    </form>
+    <div id="result"></div>
+    <button type="button" onclick="nextQuestion()">Next Question</button>
+    <button type="button" onclick="endGame()">End Game</button>
+    <div id="score"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const quizData = {
+      c: {
+        easy: [
+          {
+            question: "#include __stdio.h>\nint main() {\n  printf(\"Hello World!\");\n  return 0;\n}\n\nCorrect answer:",
+            choices: ["^", "<", "*", "<"],
+            correctAnswer: "<",
+            output: "Hello World!"
+          },
+          {
+            question: "#Include <stdio.h>\nint main() {\n  printf(\"Hello students!__\");\n  printf(\"Im here to teach C programming.\");\n  return 0;\n}\n\nCorrect answer:",
+            choices: ["\"", "+", ";"],
+            correctAnswer: "\"",
+            output: "Hello students!Im here to teach C programming."
+          },
+          {
+            question: "#include <stdio.h>\nint main() {\n  printf(\"Hello Teacher!____I am learning C.\\nAnd it is awesome!\");\n  return 0;\n}\n\nCorrect answer:",
+            choices: ["\\n", "/m", "\\n", "And"],
+            correctAnswer: "\\n",
+            output: "Hello Teacher!\n\nI am learning C.\nAnd it is awesome!"
+          },
+          {
+            question: "#include <stdio.h>\nint main() {\n  int myNum = 15;\n  printf(\"___d\", myNum);\n  return 0;\n}\n\nCorrect answer:",
+            choices: ["%", "%", "$", "&"],
+            correctAnswer: "%",
+            output: "15"
+          },
+          {
+            question: "#include <stdio.h>\nint main() {\n  float my_____Num = 3.5;\n  double myDoubleNum = 19.99;\n  printf(\"%f\\n\", myFloatNum);\n  printf(\"%If\", myDoubleNum);\n  return 0;\n}\n\nCorrect answer:",
+            choices: ["Float", "Loaf", "Float", "Cokefloat"],
+            correctAnswer: "Float",
+            output: "3.500000\n19.990000"
+          },
+          {
+            question: "#include <stdio.h>\nint main() {\n  int x = 5;\n  ____= 2;\n  int sum = 5 / 2;\n  printf(\"%d\", sum);\n  return 0;\n}\n\nCorrect answer:",
+            choices: ["int y", "printf", "int y", "Print y"],
+            correctAnswer: "int y",
+            output: "2"
+          },
+          {
+            question: "____include <stdio.h>\nint main() {\n  int myNum = 100 + 50;\n  printf(\"%d\", myNum);\n  return 0;\n}\n\nCorrect answer:",
+            choices: ["%", "+", "#"],
+            correctAnswer: "#",
+            output: "150"
+          },
+          {
+            question: "#include <stdio.h>\nint main() {\n  printf(\"%d\", 10 > 9);\n  // ______ 1 (true) because 10 is greater than 9\n  return 0;\n}\n\nCorrect answer:",
+            choices: ["1", "Returns", "true"],
+            correctAnswer: "Returns",
+            output: "1"
+          },
+          {
+            question: "#include <stdio.h>\nint main() {\n  if (20 > 18) {\n    ______ (\"20 is greater than 18\");\n  }\n  return 0;\n}\n\nCorrect answer:",
+            choices: ["printf", "Println", "int main"],
+            correctAnswer: "printf",
+            output: "20 is greater than 18"
+          },
+          {
+            question: "#include <stdio.h>\nint main() {\n  short a;\n  long b;\n\n  printf(\"1.a)______ of short = %d bytes\\n\", sizeof(a));\n  printf(\"size of long = %d 1.b)______\\n\", sizeof(b));\n  return 0;\n}\n\nCorrect answer:",
+            choices: ["SIZE", "size", "Seize"],
+            correctAnswer: "size",
+            output: "size of short = 2 bytes\nsize of long = 8 bytes"
+          }
+        ],
+        normal: [
+          // Add more C language quiz questions for normal difficulty level here
+        ],
+        hard: [
+          // Add more C language quiz questions for hard difficulty level here
+        ]
+      },
+      python: {
+        easy: [
+          // Existing Python quiz questions for easy difficulty level
+        ],
+        normal: [
+          // Existing Python quiz questions for normal difficulty level
+        ],
+        hard: [
+          // Existing Python quiz questions for hard difficulty level
+        ]
+      },
+      javascript: {
+        easy: [
+          // Existing JavaScript quiz questions for easy difficulty level
+        ],
+        normal: [
+          // Existing JavaScript quiz questions for normal difficulty level
+        ],
+        hard: [
+          // Existing JavaScript quiz questions for hard difficulty level
+        ]
+      }
+    };
+
+    let currentLanguage = '';
+    let currentDifficulty = '';
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    function showForm2() {
+      document.getElementById("form1").style.display = "none";
+      document.getElementById("form2").style.display = "block";
+    }
+
+    function showForm3() {
+      currentLanguage = document.getElementById("languageSelect").value;
+      document.getElementById("form2").style.display = "none";
+      document.getElementById("form3").style.display = "block";
+    }
+
+    function startGame() {
+      currentDifficulty = document.querySelector('input[name="difficulty"]:checked').value;
+      document.getElementById("form3").style.display = "none";
+      document.getElementById("game").style.display = "block";
+      showQuestion();
+    }
+
+    function showQuestion() {
+      const questionElement = document.getElementById("question");
+      const choicesElement = document.getElementById("choices");
+      const currentQuestion = quizData[currentLanguage][currentDifficulty][currentQuestionIndex];
+      
+      questionElement.textContent = currentQuestion.question;
+      choicesElement.innerHTML = '';
+
+      for (let i = 0; i < currentQuestion.choices.length; i++) {
+        const choice = document.createElement("input");
+        choice.type = "radio";
+        choice.name = "answer";
+        choice.value = currentQuestion.choices[i];
+        choicesElement.appendChild(choice);
+        choicesElement.appendChild(document.createTextNode(currentQuestion.choices[i]));
+        choicesElement.appendChild(document.createElement("br"));
+      }
+    }
+
+    function checkAnswer() {
+      const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+      const currentQuestion = quizData[currentLanguage][currentDifficulty][currentQuestionIndex];
+      const resultElement = document.getElementById("result");
+
+      if (selectedAnswer === currentQuestion.correctAnswer) {
+        resultElement.textContent = "Correct!";
+        score++;
+      } else {
+        resultElement.textContent = "Incorrect!";
+      }
+    }
+
+    function nextQuestion() {
+      currentQuestionIndex++;
+
+      if (currentQuestionIndex < quizData[currentLanguage][currentDifficulty].length) {
+        showQuestion();
+        document.getElementById("result").textContent = "";
+      } else {
+        endGame();
+      }
+    }
+
+    function endGame() {
+      document.getElementById("game").style.display = "none";
+      document.getElementById("score").textContent = "Your score: " + score + "/" + quizData[currentLanguage][currentDifficulty].length;
+      document.getElementById("score").style.display = "block";
+    }
+  </script>
+</body>
+</html>
