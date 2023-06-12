@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +10,7 @@
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      height: 93%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -18,8 +20,16 @@
       background-size: cover;
       font-family: rockwell;
       font-size: 13px;
-      color: white;
+      color: black;
       text-align: center;
+    }
+
+    .form0
+    {
+      height: 7%;
+      width: 100%;
+      background-color: red;
+
     }
 
     .button-style {
@@ -35,8 +45,65 @@
       background-color: red;
     }
 
+    .button-submit {
+      background-color: royalblue;
+      width: 200px;
+      height: 50px;
+      border-radius: 15px;
+      font-size: 25px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .button-submit:hover {
+      background-color: red;
+    }
+
+    .button-end {
+      background-color: royalblue;
+      width: 200px;
+      height: 50px;
+      border-radius: 15px;
+      font-size: 25px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .button-end:hover {
+      background-color: red;
+    }
+
+
+    .button-next {
+      background-color: green;
+      width: 200px;
+      height: 50px;
+      border-radius: 15px;
+      font-size: 25px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .button-next:hover {
+      background-color: red;
+    }
+
+    .button-start {
+      background-color: green;
+      width: 200px;
+      height: 50px;
+      border-radius: 15px;
+      font-size: 25px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .button-start:hover {
+      background-color: red;
+    }
+
+
+
+
     #score {
-      font-size: 30px;
+      font-size: 40px;
+
     }
 
     form {
@@ -50,6 +117,7 @@
     select,
     input[type="radio"] {
       margin: 10px;
+      font-size: 20;
     }
 
     #game {
@@ -57,63 +125,106 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      font-size: 15px;
     }
+    #question{
+      background-color: black;
+      color: white;
+    }
+
 
     #choices {
       margin: 10px 0;
+      font-size: 30px;
     }
+
+
+    .checkAnswer{
+      font-size: 30px;
+
+    }
+
 
     button[type="button"] {
       margin: 10px;
     }
+    #form3
+    {
+      font-size: 30px;
+    }
+    .question {
+  font-size: 18px;
+}
+
+    }
   </style>
 </head>
 <body>
+
+<div class="form0">
+    <button type="button" onclick="showform1()"class="button-home" style="font-size: 20px; border-radius: 10px; width: 30%; height: 30; background-color: skyblue; float: right;"> HOME</button>
+
+
+  </div>
+
+
   <form id="form1">
     <h2>
       <img src="image/gamelogo.jpg" alt="Game Logo" style="width: 150px; height: 150px;background-color: royalblue; border-radius: 50%;"><br><br>
+
       <font size="5">Welcome To Indenticode!</font> <br><br><br>
-      To Enhance your knowledge in programming language<br><br>
+      To Enhance your knowledge in<br> programming language<br><br>
     </h2>
     <button type="button" onclick="showForm2()" class="button-style">Start</button>
   </form>
 
   <form id="form2" style="display: none;">
-    <h2>Choose a Programming Language</h2>
-    <select id="languageSelect">
-      <option value="c">C</option>
-      <option value="python">Python</option>
-      <option value="javascript">JavaScript</option>
-    </select>
-    <button type="button" onclick="showForm3()">Next</button>
-  </form>
+  <h2 style="font-size: 20px;">Choose a Programming Language</h2>
+  <select id="languageSelect" style="font-size: 30px;">
+    <option value="c">C</option>
+    <option value="python">Python</option>
+    <option value="javascript">JavaScript</option>
+  </select>
+  <button type="button" onclick="showForm3()"class="button-next" style="font-size: 20px; border-radius: 10px;">Next</button>
+</form>
 
-  <form id="form3" style="display: none;">
+
+  
+
+
+  <form id="form3" style="display: none ; font-size: 20px;">
     <h2>Choose Difficulty</h2>
     <input type="radio" name="difficulty" value="easy"> Easy
     <input type="radio" name="difficulty" value="normal"> Normal
     <input type="radio" name="difficulty" value="hard"> Hard
-    <button type="button" onclick="startGame()">Start Game</button>
+    <br>
+    
+    <button type="button" onclick="startGame()"class="button-start" style="font-size: 20px; border-radius: 10px;">Next</button>
   </form>
 
   <div id="game" style="display: none;">
     <h2 id="question"></h2>
     <form id="quizForm">
       <div id="choices"></div>
-      <button type="button" onclick="checkAnswer()">Submit</button>
+      <button type="button" onclick="checkAnswer()"class="button-submit">Submit</button>
     </form>
     <div id="result"></div>
-    <button type="button" onclick="nextQuestion()">Next Question</button>
-    <button type="button" onclick="endGame()">End Game</button>
-    <div id="score"></div>
+   
+    <button type="button" onclick="endGame()"class="button-end">End Game</button>
+   
   </div>
+  <div id="score" style="display: none;"></div>
 
 
-  <script src="script.js"></script>
+  
   <script>
     const quizData = {
+
       c: {
+
+
         easy: [
+
           {
             question: "#include __stdio.h>\nint main() {\n  printf(\"Hello World!\");\n  return 0;\n}\n\nCorrect answer:",
             choices: ["^", "<", "*", "<"],
@@ -175,41 +286,45 @@
             output: "size of short = 2 bytes\nsize of long = 8 bytes"
           }
         ],
+
         normal: [
           // Add more C language quiz questions for normal difficulty level here
+
+          {
+            question: "What is the correct syntax to declare a variable in C?",
+            choices: ["variable_name", "var variable_name", "int variable_name", "declare variable_name"],
+            correctAnswer: "int variable_name"
+          },
+          {
+            question: "Which of the following is NOT a valid data type in C?",
+            choices: ["int", "float", "string", "char"],
+            correctAnswer: "string"
+          },
+          {
+            question: "What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n  int x = 5;\n  printf(\"%d\", ++x);\n  return 0;\n}",
+            choices: ["4", "5", "6", "Compilation error"],
+            correctAnswer: "6"
+          },
+          {
+            question: "What is the correct way to define a constant in C?",
+            choices: ["const int MAX_VALUE = 100;", "int constant MAX_VALUE = 100;", "final int MAX_VALUE = 100;", "int MAX_VALUE = 100;"],
+            correctAnswer: "const int MAX_VALUE = 100;"
+          },
         ],
-        hard: [
-          // Add more C language quiz questions for hard difficulty level here
-        ]
-      },
-      python: {
-        easy: [
-          // Existing Python quiz questions for easy difficulty level
-        ],
-        normal: [
-          // Existing Python quiz questions for normal difficulty level
-        ],
-        hard: [
-          // Existing Python quiz questions for hard difficulty level
-        ]
-      },
-      javascript: {
-        easy: [
-          // Existing JavaScript quiz questions for easy difficulty level
-        ],
-        normal: [
-          // Existing JavaScript quiz questions for normal difficulty level
-        ],
-        hard: [
-          // Existing JavaScript quiz questions for hard difficulty level
-        ]
+
       }
-    };
+    }
+      
 
     let currentLanguage = '';
     let currentDifficulty = '';
     let currentQuestionIndex = 0;
     let score = 0;
+
+    function showform1() {
+      document.getElementById("form1").style.display = "block";
+      document.getElementById("form3").style.display = "none";
+    }
 
     function showForm2() {
       document.getElementById("form1").style.display = "none";
@@ -248,35 +363,46 @@
       }
     }
 
-    function checkAnswer() {
-      const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
-      const currentQuestion = quizData[currentLanguage][currentDifficulty][currentQuestionIndex];
-      const resultElement = document.getElementById("result");
+function checkAnswer() {
+  const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+  const currentQuestion = quizData[currentLanguage][currentDifficulty][currentQuestionIndex];
+  const resultElement = document.getElementById("result");
 
-      if (selectedAnswer === currentQuestion.correctAnswer) {
-        resultElement.textContent = "Correct!";
-        score++;
-      } else {
-        resultElement.textContent = "Incorrect!";
-      }
+  if (selectedAnswer === currentQuestion.correctAnswer) {
+    resultElement.innerHTML = "Correct! <br>" + "output: &nbsp&nbsp"+currentQuestion.output;
+    resultElement.style.fontSize = "30px";  // Set the desired font size here
+    resultElement.style.color = "green";
+    resultElement.style.fontFamily = "rockwell";
+    resultElement.style.fontWeight = "bold";
+    score++;
+  } else {
+    resultElement.textContent = "Incorrect!";
+    resultElement.style.fontSize = "30px";
+    resultElement.style.color = "red";
+  }
+
+  // Move to the next question after a short delay
+  setTimeout(function() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < quizData[currentLanguage][currentDifficulty].length) {
+      showQuestion();
+       document.getElementById("result").textContent = "";
+    } else {
+      // Quiz is complete
+      endGame();
     }
+  }, 1500); // Delay of 1.5 seconds (1500 milliseconds)
+}
 
-    function nextQuestion() {
-      currentQuestionIndex++;
 
-      if (currentQuestionIndex < quizData[currentLanguage][currentDifficulty].length) {
-        showQuestion();
-        document.getElementById("result").textContent = "";
-      } else {
-        endGame();
-      }
-    }
+
+
 
     function endGame() {
-      document.getElementById("game").style.display = "none";
-      document.getElementById("score").textContent = "Your score: " + score + "/" + quizData[currentLanguage][currentDifficulty].length;
-      document.getElementById("score").style.display = "block";
-    }
+    document.getElementById("game").style.display = "none";
+    document.getElementById("score").textContent = "Your score: " + score + "/" + quizData[currentLanguage][currentDifficulty].length;
+    document.getElementById("score").style.display = "block";
+  }
   </script>
 </body>
 </html>
