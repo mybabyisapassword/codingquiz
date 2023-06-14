@@ -1,414 +1,67 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Programming Quiz Game</title>
-  
-  <style>
-    body {
-  margin: 0;
-  padding: 0;
-  height: 100vh; /* Use viewport height for full screen height */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("image/background.png");
-  background-position: center;
-  background-size: cover;
-  font-family: rockwell;
-  font-size: 16px; /* Increase font size for better readability on mobile */
-  color: black;
-  text-align: center;
-}
-
-
-    .form0
-    {
-      height: 7vx;
-      width: 100%;
-      background-color: red;
-
-    }
-
-    .button-style {
-      background-color: royalblue;
-      width: 200px;
-      height: 50px;
-      border-radius: 15px;
-      font-size: 25px;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .button-style:hover {
-      background-color: red;
-    }
-
-    .button-submit {
-      background-color: royalblue;
-      width: 200px;
-      height: 50px;
-      border-radius: 15px;
-      font-size: 25px;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .button-submit:hover {
-      background-color: red;
-    }
-
-    .button-end {
-      background-color: royalblue;
-      width: 200px;
-      height: 50px;
-      border-radius: 15px;
-      font-size: 25px;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .button-end:hover {
-      background-color: red;
-    }
-
-
-    .button-next {
-      background-color: green;
-      width: 200px;
-      height: 50px;
-      border-radius: 15px;
-      font-size: 25px;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .button-next:hover {
-      background-color: red;
-    }
-
-    .button-start {
-      background-color: green;
-      width: 200px;
-      height: 50px;
-      border-radius: 15px;
-      font-size: 25px;
-      transition: background-color 0.3s ease-in-out;
-    }
-
-    .button-start:hover {
-      background-color: red;
-    }
-
-
-
-
-    #score {
-      font-size: 40px;
-
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    select,
-    input[type="radio"] {
-      margin: 10px;
-      font-size: 20;
-    }
-
-    #game {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 15px;
-    }
-    #question{
-      background-color: black;
-      color: white;
-    }
-
-
-    #choices {
-      margin: 10px 0;
-      font-size: 30px;
-    }
-
-
-    .checkAnswer{
-      font-size: 30px;
-
-    }
-
-
-    button[type="button"] {
-      margin: 10px;
-    }
-    #form3
-    {
-      font-size: 30px;
-    }
-    .question {
-  font-size: 18px;
-}
-.img{
-
-  background-color: red;
-}
-
-    }
-  </style>
-</head>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
 <body>
 
-<div class="form0">
-    <button type="button" onclick="showform1()"class="button-home" style="font-size: 20px; border-radius: 10px; width: 30%; height: 30; background-color: skyblue; float: right;"> HOME</button>
 
-
+<div class="form0" style="display: none;">
+    <div type="button" onclick="home()"class="button-home">HOME</div>
   </div>
-
-
   <form id="form1">
-    <h2>
-      <img src="image/gamelogo.jpg" alt="Game Logo" style="width: 150px; height: 150px;background-color: royalblue; border-radius: 50%;"><br><br>
-
-      <font size="5">Welcome To Indenticode!</font> <br><br><br>
+    
+      <img src="image/back1.jpg" alt="Game Logo" class="logo"><br><br>
+<b>
+      <font style="color: black;" size="55">Welcome To Indenticode!</font> 
+      <h2 style="color: black;">
       To Enhance your knowledge in<br> programming language<br><br>
     </h2>
     <button type="button" onclick="showForm2()" class="button-style">Start</button>
-  </form>
+  </form></b>
 
   <form id="form2" style="display: none;">
-  <h2 style="font-size: 20px;">Choose a Programming Language</h2>
-  <select id="languageSelect" style="font-size: 30px;">
-    <option value="c" data-image="background.png">C</option>
-    <option value="python" data-image="path_to_python_image.jpg">Python</option>
-    <option value="javascript" data-image="path_to_javascript_image.jpg">JavaScript</option>
-  </select>
-  <button type="button" onclick="showForm3()" class="button-next" style="font-size: 20px; border-radius: 10px;">Next</button>
-</form>
+    <h2 style="font-size: 35px; color: white;">Choose a Programming Language</h2>
+    <div class="image-grid">  
+      <img src="image/c+.png" class="choicesimgs" alt="Image 1" onclick="showForm3('c+')">
+      <img src="image/c.png" class="choicesimgs" alt="Image 2" onclick="showForm3('c')">
+      <img src="image/java.png" class="choicesimgs" alt="Image 3" onclick="showForm3('java')">
+      <img src="image/js.png" class="choicesimgs" alt="Image 4" onclick="showForm3('js')">
+      <img src="image/html.webp" class="choicesimgs" alt="Image 5" onclick="showForm3('html')">
+      <img src="image/python.png" class="choicesimgs" alt="Image 6" onclick="showForm3('python')">
+    </div>  
+  </form>
 
-
-
-  
-
-
-  <form id="form3" style="display: none ; font-size: 20px;">
-    <h2>Choose Difficulty</h2>
-    <input type="radio" name="difficulty" value="easy"> Easy
-    <input type="radio" name="difficulty" value="normal"> Normal
-    <input type="radio" name="difficulty" value="hard"> Hard
-    <br>
-    
-    <button type="button" onclick="startGame()"class="button-start" style="font-size: 20px; border-radius: 10px;">Next</button>
+  <form id="form3" style="display: none; font-size: 20px; color: white;">
+    <h2 id="languageType">Choose Difficulty</h2>
+    <h2 id="language" style="text-transform: capitalize";></h2>
+    <div class="button-row">
+      <button type="button" onclick="startGame('easy')" class="button-start">Easy</button>
+    </div>
+    <div class="button-row">
+      <button type="button" onclick="startGame('normal')" class="button-start">Normal</button>
+    </div>
+    <div class="button-row">
+      <button type="button" onclick="startGame('hard')" class="button-start">Hard</button>
+    </div>
   </form>
 
   <div id="game" style="display: none;">
+    <div id="result"></div> 
+    <div class="questioncontainer">
     <h2 id="question"></h2>
+  </div>
     <form id="quizForm">
-      <div id="choices"></div>
-      <button type="button" onclick="checkAnswer()"class="button-submit">Submit</button>
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr);" id="choices"></div>
     </form>
-    <div id="result"></div>
-   
-    <button type="button" onclick="endGame()"class="button-end">End Game</button>
-   
   </div>
   <div id="score" style="display: none;"></div>
+  <button type="button" style="display: none;" onclick="endGame()"class="button-end">End Game</button>
 
 
   
-  <script>
-    const quizData = {
-
-      c: {
-
-
-        easy: [
-
-          {
-            question: "#include __stdio.h>\nint main() {\n  printf(\"Hello World!\");\n  return 0;\n}\n\nCorrect answer:",
-            choices: ["^", "<", "*", "<"],
-            correctAnswer: "<",
-            output: "Hello World!"
-          },
-          {
-            question: "#Include <stdio.h>\nint main() {\n  printf(\"Hello students!__\");\n  printf(\"Im here to teach C programming.\");\n  return 0;\n}\n\nCorrect answer:",
-            choices: ["\"", "+", ";"],
-            correctAnswer: "\"",
-            output: "Hello students!Im here to teach C programming."
-          },
-          {
-            question: "#include <stdio.h>\nint main() {\n  printf(\"Hello Teacher!____I am learning C.\\nAnd it is awesome!\");\n  return 0;\n}\n\nCorrect answer:",
-            choices: ["\\n", "/m", "\\n", "And"],
-            correctAnswer: "\\n",
-            output: "Hello Teacher!\n\nI am learning C.\nAnd it is awesome!"
-          },
-          {
-            question: "#include <stdio.h>\nint main() {\n  int myNum = 15;\n  printf(\"___d\", myNum);\n  return 0;\n}\n\nCorrect answer:",
-            choices: ["%", "%", "$", "&"],
-            correctAnswer: "%",
-            output: "15"
-          },
-          {
-            question: "#include <stdio.h>\nint main() {\n  float my_____Num = 3.5;\n  double myDoubleNum = 19.99;\n  printf(\"%f\\n\", myFloatNum);\n  printf(\"%If\", myDoubleNum);\n  return 0;\n}\n\nCorrect answer:",
-            choices: ["Float", "Loaf", "Float", "Cokefloat"],
-            correctAnswer: "Float",
-            output: "3.500000\n19.990000"
-          },
-          {
-            question: "#include <stdio.h>\nint main() {\n  int x = 5;\n  ____= 2;\n  int sum = 5 / 2;\n  printf(\"%d\", sum);\n  return 0;\n}\n\nCorrect answer:",
-            choices: ["int y", "printf", "int y", "Print y"],
-            correctAnswer: "int y",
-            output: "2"
-          },
-          {
-            question: "____include <stdio.h>\nint main() {\n  int myNum = 100 + 50;\n  printf(\"%d\", myNum);\n  return 0;\n}\n\nCorrect answer:",
-            choices: ["%", "+", "#"],
-            correctAnswer: "#",
-            output: "150"
-          },
-          {
-            question: "#include <stdio.h>\nint main() {\n  printf(\"%d\", 10 > 9);\n  // ______ 1 (true) because 10 is greater than 9\n  return 0;\n}\n\nCorrect answer:",
-            choices: ["1", "Returns", "true"],
-            correctAnswer: "Returns",
-            output: "1"
-          },
-          {
-            question: "#include <stdio.h>\nint main() {\n  if (20 > 18) {\n    ______ (\"20 is greater than 18\");\n  }\n  return 0;\n}\n\nCorrect answer:",
-            choices: ["printf", "Println", "int main"],
-            correctAnswer: "printf",
-            output: "20 is greater than 18"
-          },
-          {
-            question: "#include <stdio.h>\nint main() {\n  short a;\n  long b;\n\n  printf(\"1.a)______ of short = %d bytes\\n\", sizeof(a));\n  printf(\"size of long = %d 1.b)______\\n\", sizeof(b));\n  return 0;\n}\n\nCorrect answer:",
-            choices: ["SIZE", "size", "Seize"],
-            correctAnswer: "size",
-            output: "size of short = 2 bytes\nsize of long = 8 bytes"
-          }
-        ],
-
-        normal: [
-          // Add more C language quiz questions for normal difficulty level here
-
-          {
-            question: "What is the correct syntax to declare a variable in C?",
-            choices: ["variable_name", "var variable_name", "int variable_name", "declare variable_name"],
-            correctAnswer: "int variable_name"
-          },
-          {
-            question: "Which of the following is NOT a valid data type in C?",
-            choices: ["int", "float", "string", "char"],
-            correctAnswer: "string"
-          },
-          {
-            question: "What is the output of the following code?\n\n#include <stdio.h>\n\nint main() {\n  int x = 5;\n  printf(\"%d\", ++x);\n  return 0;\n}",
-            choices: ["4", "5", "6", "Compilation error"],
-            correctAnswer: "6"
-          },
-          {
-            question: "What is the correct way to define a constant in C?",
-            choices: ["const int MAX_VALUE = 100;", "int constant MAX_VALUE = 100;", "final int MAX_VALUE = 100;", "int MAX_VALUE = 100;"],
-            correctAnswer: "const int MAX_VALUE = 100;"
-          },
-        ],
-
-      }
-    }
-      
-
-    let currentLanguage = '';
-    let currentDifficulty = '';
-    let currentQuestionIndex = 0;
-    let score = 0;
-
-    function showform1() {
-      document.getElementById("form1").style.display = "block";
-      document.getElementById("form3").style.display = "none";
-    }
-
-    function showForm2() {
-      document.getElementById("form1").style.display = "none";
-      document.getElementById("form2").style.display = "block";
-    }
-
-    function showForm3() {
-      currentLanguage = document.getElementById("languageSelect").value;
-      document.getElementById("form2").style.display = "none";
-      document.getElementById("form3").style.display = "block";
-    }
-
-    function startGame() {
-      currentDifficulty = document.querySelector('input[name="difficulty"]:checked').value;
-      document.getElementById("form3").style.display = "none";
-      document.getElementById("game").style.display = "flex";
-      showQuestion();
-    }
-
-    function showQuestion() {
-      const questionElement = document.getElementById("question");
-      const choicesElement = document.getElementById("choices");
-      const currentQuestion = quizData[currentLanguage][currentDifficulty][currentQuestionIndex];
-
-      questionElement.textContent = currentQuestion.question;
-      choicesElement.innerHTML = '';
-
-      for (let i = 0; i < currentQuestion.choices.length; i++) {
-        const choice = document.createElement("input");
-        choice.type = "radio";
-        choice.name = "answer";
-        choice.value = currentQuestion.choices[i];
-        choicesElement.appendChild(choice);
-        choicesElement.appendChild(document.createTextNode(currentQuestion.choices[i]));
-        choicesElement.appendChild(document.createElement("br"));
-      }
-    }
-
-function checkAnswer() {
-  const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
-  const currentQuestion = quizData[currentLanguage][currentDifficulty][currentQuestionIndex];
-  const resultElement = document.getElementById("result");
-
-  if (selectedAnswer === currentQuestion.correctAnswer) {
-    resultElement.innerHTML = "Correct! <br>" + "output: &nbsp&nbsp"+currentQuestion.output;
-    resultElement.style.fontSize = "30px";  // Set the desired font size here
-    resultElement.style.color = "green";
-    resultElement.style.fontFamily = "rockwell";
-    resultElement.style.fontWeight = "bold";
-    score++;
-  } else {
-    resultElement.textContent = "Incorrect!";
-    resultElement.style.fontSize = "30px";
-    resultElement.style.color = "red";
-  }
-
-  // Move to the next question after a short delay
-  setTimeout(function() {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < quizData[currentLanguage][currentDifficulty].length) {
-      showQuestion();
-       document.getElementById("result").textContent = "";
-    } else {
-      // Quiz is complete
-      endGame();
-    }
-  }, 1500); // Delay of 1.5 seconds (1500 milliseconds)
-}
-
-
-
-
-
-    function endGame() {
-    document.getElementById("game").style.display = "none";
-    document.getElementById("score").textContent = "Your score: " + score + "/" + quizData[currentLanguage][currentDifficulty].length;
-    document.getElementById("score").style.display = "block";
-  }
-  </script>
 </body>
 </html>
+
