@@ -262,10 +262,10 @@ button[type="button"] {
 }
 
 .choicesimgs {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   justify-self: center; /* Center horizontally within each cell */
-  margin: 15px; /* Adjust the margin value as needed */
+  margin: 10px; /* Adjust the margin value as needed */
   -webkit-box-reflect: below 0.0001px linear-gradient(transparent, #0003);
 }
 
