@@ -94,20 +94,10 @@ const quizData = {
 
   "html": {
   "easy": [
-    {
-      "question": "What does HTML stand for?",
-      "choices": [
-        "Hyperlink and Text Markup Language",
-        "Home Tool Markup Language\n",
-
-        "Hyper Text Markup Language",
-        "Hyper Tool Markup Language"
-      ],
-      "correctAnswer": "Hyper Text Markup Language"
-    },
+    
     {
       "question": "What is the correct HTML tag for the largest heading?",
-      "choices": ["<h1>", "<h6>", "<head>", "<heading>"],
+      "choices": ["<h1>",  "<head>", "<heading>"],
       "correctAnswer": "<h1>"
     },
     {
@@ -132,61 +122,24 @@ const quizData = {
       "choices": ["alt", "src", "title", "href"],
       "correctAnswer": "alt"
     },
-    {
-      "question": "Which HTML tag is used to define a table row?",
-      "choices": ["<tr>", "<td>", "<th>", "<table-row>"],
-      "correctAnswer": "<tr>"
-    },
-    {
-      "question": "What does the HTML acronym CSS stand for?",
-      "choices": [
-        "Cascading Style Sheet",
-        "Creative Style System",
-        "Colorful Style Sheet",
-        "Computer Style Sheet"
-      ],
-      "correctAnswer": "Cascading Style Sheet"
-    },
-    {
-      "question": "Which HTML tag is used to define a hyperlink?",
-      "choices": ["<a>", "<link>", "<href>", "<hyperlink>"],
-      "correctAnswer": "<a>"
-    },
-    {
-      "question": "Which attribute is used to specify a target URL for a hyperlink?",
-      "choices": ["href", "src", "link", "target"],
-      "correctAnswer": "href"
-    }
+   
   ],
   "hard": [
-    {
-      "question": "Which HTML tag is used to define a section of an HTML document?",
-      "choices": ["<section>", "<div>", "<article>", "<span>"],
-      "correctAnswer": "<section>"
-    },
+    
     {
       "question": "Which element is used to define the document's header section?",
-      "choices": ["<header>", "<head>", "<h1>", "<top>"],
+      "choices": ["<header>", "<head>", "<top>"],
       "correctAnswer": "<head>"
     },
-    {
-      "question": "What is the correct way to add an external JavaScript file to an HTML document?",
-      "choices": [
-        "<script src=\"script.js\"></script>",
-        "<javascript src=\"script.js\"></javascript>",
-        "<js src=\"script.js\"></js>",
-        "<include src=\"script.js\"></include>"
-      ],
-      "correctAnswer": "<script src=\"script.js\"></script>"
-    },
+    
     {
       "question": "Which HTML tag is used to define a form?",
-      "choices": ["<form>", "<input>", "<button>", "<label>"],
+      "choices": ["<form>", "<input>", "<label>"],
       "correctAnswer": "<form>"
     },
     {
       "question": "What is the correct HTML tag for the smallest heading?",
-      "choices": ["<h6>", "<h1>", "<head>", "<h7>"],
+      "choices": ["<h6>", "<head>", "<h7>"],
       "correctAnswer": "<h6>"
     }
   ],
@@ -197,7 +150,7 @@ const quizData = {
   "easy": [
     {
       "question": "Which of the following is the correct way to include the <iostream> library in C++?",
-      "choices": ["<iostream>", "<stdlib.h>", "<iostream.h>", "<stdio.h>"],
+      "choices": ["<iostream>", "<stdlib.h>", "<stdio.h>"],
       "correctAnswer": "<iostream>"
     },
     {
@@ -224,17 +177,17 @@ const quizData = {
   "normal": [
     {
       "question": "Which of the following is the correct way to declare a constant in C++?",
-      "choices": ["const", "#define", "constexpr", "constant"],
+      "choices": ["const","constexpr", "constant"],
       "correctAnswer": "const"
     },
     {
       "question": "What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n  int x = 2;\n  x *= 3;\n  std::cout << x;\n  return 0;\n}",
-      "choices": ["2", "3", "6", "Compilation error"],
+      "choices": ["2", "3", "6", "Error"],
       "correctAnswer": "6"
     },
     {
       "question": "Which data type is used to store a single character in C++?",
-      "choices": ["char", "int", "string", "float"],
+      "choices": ["char", "string", "float"],
       "correctAnswer": "char"
     },
     {
@@ -251,12 +204,12 @@ const quizData = {
   "hard": [
     {
       "question": "What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n  int x = 10;\n  std::cout << ++x;\n  return 0;\n}",
-      "choices": ["9", "10", "11", "Compilation error"],
+      "choices": ["9", "10", "11", "Error"],
       "correctAnswer": "11"
     },
     {
       "question": "What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n  int x = 5;\n  std::cout << x++;\n  return 0;\n}",
-      "choices": ["5", "6", "0", "Compilation error"],
+      "choices": ["5", "6", "0", "Error"],
       "correctAnswer": "5"
     },
     {
@@ -266,12 +219,12 @@ const quizData = {
     },
     {
       "question": "Which library is used for input and output operations in C++?",
-      "choices": ["<iostream>", "<stdlib.h>", "<fstream>", "<iomanip>"],
+      "choices": ["<iostream>", "<stdlib.h>","<iomanip>"],
       "correctAnswer": "<iostream>"
     },
     {
       "question": "What is the result of the following expression in C++?\n\n10 / 3",
-      "choices": ["3", "3.33", "3.0", "3.333"],
+      "choices": ["3", "3.33", "3.0", "3.1"],
       "correctAnswer": "3"
     }
   ],
@@ -283,22 +236,18 @@ const quizData = {
   "easy": [
     {
       "question": "Which keyword is used to declare a variable in JavaScript?",
-      "choices": ["var", "int", "variable", "declare"],
+      "choices": ["var", "int", "variable"],
       "correctAnswer": "var"
     },
     {
       "question": "What is the output of the following code?\n\nconsole.log(5 > 3);",
-      "choices": ["true", "false", "undefined", "NaN"],
+      "choices": ["true", "false", "NaN"],
       "correctAnswer": "true"
     },
-    {
-      "question": "What is the correct way to write a comment in JavaScript?",
-      "choices": ["// This is a comment", "/* This is a comment */", "<!-- This is a comment -->", "# This is a comment"],
-      "correctAnswer": "// This is a comment"
-    },
+   
     {
       "question": "Which built-in method returns the length of a string?",
-      "choices": ["length()", "size()", "count()", "getLength()"],
+      "choices": ["length()", "size()", "count()"],
       "correctAnswer": "length()"
     },
     {
@@ -310,64 +259,47 @@ const quizData = {
   "normal": [
     {
       "question": "What is the output of the following code?\n\nconsole.log(typeof 42);",
-      "choices": ["number", "string", "boolean", "undefined"],
+      "choices": ["number", "string", "boolean"],
       "correctAnswer": "number"
     },
     {
       "question": "Which method is used to remove the last element from an array in JavaScript?",
-      "choices": ["pop()", "shift()", "remove()", "delete()"],
+      "choices": ["pop()", "shift()", "remove()"],
       "correctAnswer": "pop()"
     },
     {
-      "question": "What is the purpose of the 'this' keyword in JavaScript?",
-      "choices": [
-        "It refers to the current object",
-        "It refers to the previous object",
-        "It refers to the next object",
-        "It refers to the global object"
-      ],
-      "correctAnswer": "It refers to the current object"
-    },
+    
     {
       "question": "Which function is used to convert a string to an integer in JavaScript?",
-      "choices": ["parseInt()", "toString()", "parseFloat()", "toFixed()"],
+      "choices": ["parseInt()", "toString()", "toFixed()"],
       "correctAnswer": "parseInt()"
     },
     {
       "question": "What is the output of the following code?\n\nconsole.log(3 === '3');",
-      "choices": ["true", "false", "undefined", "NaN"],
+      "choices": ["true", "false", "NaN"],
       "correctAnswer": "false"
     }
   ],
   "hard": [
     {
       "question": "What will be the output of the following JavaScript code?\n\nconsole.log(2 + '2');",
-      "choices": ["4", "22", "TypeError", "NaN"],
+      "choices": ["22", "TypeError", "NaN"],
       "correctAnswer": "22"
     },
     {
       "question": "What is the output of the following code?\n\nconsole.log(typeof NaN);",
-      "choices": ["number", "string", "undefined", "NaN"],
+      "choices": ["number", "string", "NaN"],
       "correctAnswer": "number"
     },
-    {
-      "question": "What is the purpose of the 'use strict' directive in JavaScript?",
-      "choices": [
-        "It enforces stricter parsing and error handling",
-        "It enables additional language features",
-        "It disables strict mode",
-        "It improves performance"
-      ],
-      "correctAnswer": "It enforces stricter parsing and error handling"
-    },
+    
     {
       "question": "Which method is used to add new elements to the beginning of an array in JavaScript?",
-      "choices": ["unshift()", "push()", "add()", "insert()"],
+      "choices": ["unshift()", "push()", "add()"],
       "correctAnswer": "unshift()"
     },
     {
       "question": "What is the output of the following code?\n\nconsole.log(5 + true);",
-      "choices": ["6", "5", "TypeError", "NaN"],
+      "choices": ["6", "5", "TypeError", ],
       "correctAnswer": "6"
     }
   ],
@@ -377,17 +309,17 @@ const quizData = {
   "easy": [
     {
       "question": "Which keyword is used to define a class in Java?",
-      "choices": ["class", "public", "void", "new"],
+      "choices": ["class", "public", "void"],
       "correctAnswer": "class"
     },
     {
       "question": "What is the output of the following code?\n\nint x = 10;\nint y = 5;\nSystem.out.println(x + y);",
-      "choices": ["10", "5", "15", "Compilation error"],
+      "choices": ["10", "5", "15", "Error"],
       "correctAnswer": "15"
     },
     {
       "question": "Which data type is used to store a single character in Java?",
-      "choices": ["char", "string", "int", "boolean"],
+      "choices": ["char", "string", "int"],
       "correctAnswer": "char"
     },
     {
@@ -404,59 +336,41 @@ const quizData = {
   "normal": [
     {
       "question": "Which keyword is used to define a method that does not return a value in Java?",
-      "choices": ["void", "null", "return", "int"],
+      "choices": ["void", "null","int"],
       "correctAnswer": "void"
     },
     {
       "question": "What is the output of the following code?\n\nString name = \"John\";\nSystem.out.println(name.length());",
-      "choices": ["4", "0", "5", "Compilation error"],
+      "choices": ["4", "0", "5", "Error"],
       "correctAnswer": "4"
     },
     {
       "question": "Which data structure in Java is used to store elements in key-value pairs?",
-      "choices": ["HashMap", "ArrayList", "LinkedList", "HashSet"],
+      "choices": ["HashMap", "ArrayList","HashSet"],
       "correctAnswer": "HashMap"
     },
-    {
-      "question": "What is the purpose of the 'static' keyword in Java?",
-      "choices": [
-        "It allows a variable or method to be accessed without an instance of the class",
-        "It indicates that a class cannot be subclassed",
-        "It is used to declare a constant",
-        "It specifies the access level of a class"
-      ],
-      "correctAnswer": "It allows a variable or method to be accessed without an instance of the class"
-    },
+   
     {
       "question": "Which control structure is used to execute a block of code repeatedly as long as a condition is true in Java?",
-      "choices": ["while loop", "for loop", "if statement", "switch statement"],
+      "choices": ["while loop", "for loop", "if statement"],
       "correctAnswer": "while loop"
     }
   ],
   "hard": [
     {
       "question": "What is the output of the following Java code?\n\nint x = 5;\nSystem.out.println(++x);",
-      "choices": ["4", "5", "6", "Compilation error"],
+      "choices": ["4", "5", "6", "Error"],
       "correctAnswer": "6"
     },
     {
       "question": "What is the output of the following code?\n\nString str = \"Hello\";\nstr.concat(\" World!\");\nSystem.out.println(str);",
-      "choices": ["Hello", "World!", "Hello World!", "Compilation error"],
+      "choices": ["Hello", "World!", "Hello World!"],
       "correctAnswer": "Hello"
     },
-    {
-      "question": "What is the purpose of the 'finally' block in a try-catch-finally statement in Java?",
-      "choices": [
-        "It is executed regardless of whether an exception is thrown or caught",
-        "It is executed only if an exception is thrown",
-        "It is executed only if an exception is caught",
-        "It is used to specify the code to be executed in case of an exception"
-      ],
-      "correctAnswer": "It is executed regardless of whether an exception is thrown or caught"
-    },
+    
     {
       "question": "Which method is used to convert a string to an integer in Java?",
-      "choices": ["Integer.parseInt()", "toString()", "Float.parseFloat()", "Math.round()"],
+      "choices": ["Integer.parseInt()", "toString()", "Math.round()"],
       "correctAnswer": "Integer.parseInt()"
     },
     {
@@ -469,11 +383,7 @@ const quizData = {
 
   "python": {
   "easy": [
-    {
-      "question": "Which of the following is the correct way to comment in Python?",
-      "choices": ["// This is a comment", "# This is a comment", "/* This is a comment */", "<!-- This is a comment -->"],
-      "correctAnswer": "# This is a comment"
-    },
+   
     {
       "question": "What is the output of the following code?\n\nx = 5\ny = 3\nprint(x + y)",
       "choices": ["2", "5", "8", "15"],
@@ -481,7 +391,7 @@ const quizData = {
     },
     {
       "question": "Which data type is used to store a sequence of characters in Python?",
-      "choices": ["string", "int", "float", "boolean"],
+      "choices": ["string", "float", "boolean"],
       "correctAnswer": "string"
     },
     {
@@ -498,17 +408,17 @@ const quizData = {
   "normal": [
     {
       "question": "Which function is used to get the length of a list in Python?",
-      "choices": ["len()", "size()", "length()", "count()"],
+      "choices": ["len()", "size()", "count()"],
       "correctAnswer": "len()"
     },
     {
       "question": "What is the output of the following code?\n\nfruits = ['apple', 'banana', 'cherry']\nprint(fruits[1])",
-      "choices": ["apple", "banana", "cherry", "SyntaxError"],
+      "choices": ["apple", "banana", "cherry"],
       "correctAnswer": "banana"
     },
     {
       "question": "Which method is used to convert a string to lowercase in Python?",
-      "choices": ["lower()", "capitalize()", "upper()", "swapcase()"],
+      "choices": ["lower()", "upper()", "swapcase()"],
       "correctAnswer": "lower()"
     },
     {
@@ -535,7 +445,7 @@ const quizData = {
     },
     {
       "question": "Which method is used to remove whitespace from both ends of a string in Python?",
-      "choices": ["strip()", "trim()", "rstrip()", "lstrip()"],
+      "choices": ["strip()", "rstrip()", "lstrip()"],
       "correctAnswer": "strip()"
     },
     {
