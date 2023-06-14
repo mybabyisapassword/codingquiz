@@ -264,8 +264,8 @@ button[type="button"] {
 }
 
 .choicesimgs {
-  width: 90px;
-  height: 90px;
+  width: 90vh;
+  height: 90vh;
   justify-self: center; /* Center horizontally within each cell */
   margin: 10px; /* Adjust the margin value as needed */
   -webkit-box-reflect: below 0.0001px linear-gradient(transparent, #0003);
