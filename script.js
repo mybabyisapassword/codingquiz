@@ -1,101 +1,622 @@
 const quizData = {
-  c: {
-    easy: [{
-        question: "#include __stdio.h>\nint main() {\n  printf(\"Hello World!\");\n  return 0;\n}\n\nCorrect answer:",
-        choices: ["^", "<", "*", "="],
-        correctAnswer: "<",
-        output: "Hello World!"
-      },
-      // Add more easy C language questions here
-    ],
-    normal: [
-      // Add more medium C language questions here
-    ],
-    hard: [{
-        question: "#include <stdio.h>\nint main() {\n  int myNum = 15;\n  printf(\"___d\", myNum);\n  return 0;\n}\n\nCorrect answer:",
-        choices: ["%", "%", "$", "&"],
-        correctAnswer: "%",
-        output: "15"
-      },
-      // Add more hard C language questions here
-    ]
-  },
-  html: {
-    easy: [{
-        question: "What does HTML stand for?",
-        choices: ["Hyperlink and Text Markup Language", "Home Tool Markup Language", "Hyper Text Markup Language", "Hyper Tool Markup Language"],
-        correctAnswer: "Hyper Text Markup Language"
-      },
-      // Add more easy HTML questions here
-    ],
-    normal: [
-      // Add more medium HTML questions here
-    ],
-    hard: [{
-        question: "What is the correct HTML element for inserting a line break?",
-        choices: ["<br>", "<break>", "<lb>", "<newline>"],
-        correctAnswer: "<br>"
-      },
-      // Add more hard HTML questions here
-    ]
-  },
-  js: {
-    easy: [{
-        question: "Which keyword is used to declare a variable in JavaScript?",
-        choices: ["var", "int", "variable", "declare"],
-        correctAnswer: "var"
-      },
-      // Add more easy JavaScript (JS) questions here
-    ],
-    normal: [
-      // Add more medium JavaScript (JS) questions here
-    ],
-    hard: [{
-        question: "What will be the output of the following JavaScript code?\n\nconsole.log(2 + '2');",
-        choices: ["4", "22", "TypeError", "NaN"],
-        correctAnswer: "22"
-      },
-      // Add more hard JavaScript (JS) questions here
-    ]
-  },
-  java: {
-    easy: [{
-        question: "Which keyword is used to define a class in Java?",
-        choices: ["class", "public", "void", "new"],
-        correctAnswer: "class"
-      },
-      // Add more easy Java questions here
-    ],
-    normal: [
-      // Add more medium Java questions here
-    ],
-    hard: [{
-        question: "What is the output of the following Java code?\n\nint x = 5;\nSystem.out.println(++x);",
-        choices: ["4", "5", "6", "Compilation error"],
-        correctAnswer: "6"
-      },
-      // Add more hard Java questions here
-    ]
-  },
-  python: {
-    easy: [{
-        question: "Which of the following is the correct way to comment in Python?",
-        choices: ["// This is a comment", "# This is a comment", "/* This is a comment */", "<!-- This is a comment -->"],
-        correctAnswer: "# This is a comment"
-      },
-      // Add more easy Python questions here
-    ],
-    normal: [
-      // Add more medium Python questions here
-    ],
-    hard: [{
-        question: "What is the output of the following Python code?\n\nx = 10\ny = 5\nprint(x % y)",
-        choices: ["2", "5", "10", "0"],
-        correctAnswer: "0"
-      },
-      // Add more hard Python questions here
-    ]
-  }
+  "c": {
+  "easy": [
+    {
+      "question": "#include <stdio.h>\n\nint main() {\n   printf(\"Hello World!\");\n   return 0;\n}\n\nWhat is the correct answer?",
+      "choices": ["^", "<", "*", "="],
+      "correctAnswer": "<",
+      "output": "Hello World!"
+    },
+    {
+      "question": "What is the keyword used to define a constant in C?",
+      "choices": ["final", "const", "constant", "define"],
+      "correctAnswer": "const"
+    },
+    {
+      "question": "Which symbol is used to denote a single-line comment in C?",
+      "choices": ["//", "/*", "##", "--"],
+      "correctAnswer": "//"
+    },
+    {
+      "question": "What is the extension of C source code files?",
+      "choices": [".c", ".cpp", ".h", ".txt"],
+      "correctAnswer": ".c"
+    },
+    {
+      "question": "Which function is used to read a character from the standard input in C?",
+      "choices": ["fscanf", "scanf", "getchar", "read"],
+      "correctAnswer": "getchar"
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 10;\n   printf(\"%d\", x++);\n   return 0;\n}\n```\n",
+      "choices": ["9", "10", "11", "Compiler error"],
+      "correctAnswer": "10"
+    },
+    {
+      "question": "Which operator is used to access the value at a specific memory address in C?",
+      "choices": ["&", "*", "#", "$"],
+      "correctAnswer": "*"
+    },
+    {
+      "question": "What is the correct way to declare an integer variable named 'num' in C?",
+      "choices": ["integer num;", "int num;", "num as integer;", "var num as int;"],
+      "correctAnswer": "int num;"
+    },
+    {
+      "question": "Which header file is required to work with file I/O operations in C?",
+      "choices": ["<io.h>", "<file.h>", "<stdio.h>", "<iostream.h>"],
+      "correctAnswer": "<stdio.h>"
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   float x = 3.5;\n   printf(\"%d\", (int)x);\n   return 0;\n}\n```\n",
+      "choices": ["3.5", "3", "4", "Compiler error"],
+      "correctAnswer": "3"
+    }
+  ],
+  "normal": [
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 5;\n   int *p = &x;\n   printf(\"%d\", *p);\n   return 0;\n}\n```\n",
+      "choices": ["5", "0", "Garbage value", "Compiler error"],
+      "correctAnswer": "5"
+    },
+    {
+      "question": "What does the 'sizeof' operator in C return?",
+      "choices": ["The size of the variable in bytes", "The size of the variable in bits", "The size of the variable in characters", "The address of the variable"],
+      "correctAnswer": "The size of the variable in bytes"
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int arr[] = {1, 2, 3, 4, 5};\n   printf(\"%d\", *(arr + 2));\n   return 0;\n}\n```\n",
+      "choices": ["1", "2", "3", "4"],
+      "correctAnswer": "3"
+    },
+    {
+      "question": "What is the correct way to declare a pointer to a function in C?",
+      "choices": ["int *func()", "int (*func)()", "int *func", "int func()"],
+      "correctAnswer": "int (*func)()"
+    },
+    {
+      "question": "What is the result of the following expression in C?\n\n```c\n3 + 5 * 2 - 4 / 2\n```\n",
+      "choices": ["6", "10", "7", "8"],
+      "correctAnswer": "10"
+    },
+    {
+      "question": "Which of the following is NOT a valid data type in C?",
+      "choices": ["float", "boolean", "char", "double"],
+      "correctAnswer": "boolean"
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 10;\n   if (x > 5)\n       printf(\"Hello\");\n   else if (x > 2)\n       printf(\"World\");\n   else\n       printf(\"!\");\n   return 0;\n}\n```\n",
+      "choices": ["Hello", "World", "!", "Hello World"],
+      "correctAnswer": "Hello"
+    },
+    {
+      "question": "Which of the following statements is used to terminate a loop in C?",
+      "choices": ["break", "stop", "exit", "terminate"],
+      "correctAnswer": "break"
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 0;\n   while (x < 5) {\n       printf(\"%d\", x);\n       x++;\n   }\n   return 0;\n}\n```\n",
+      "choices": ["0 1 2 3 4", "0 1 2 3 4 5", "1 2 3 4 5", "Compiler error"],
+      "correctAnswer": "0 1 2 3 4"
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   for (int i = 0; i < 5; i++) {\n       if (i == 3)\n           continue;\n       printf(\"%d\", i);\n   }\n   return 0;\n}\n```\n",
+      "choices": ["0 1 2 3 4", "0 1 2 4", "1 2 3 4", "Compiler error"],
+      "correctAnswer": "0 1 2 4"
+    }
+  ],
+  "hard": [
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 10;\n   int *p = &x;\n   printf(\"%d\", *p++);\n   return 0;\n}\n```\n",
+      "choices": ["10", "11", "Compiler error", "Undefined behavior"],
+      "correctAnswer": "10"
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int arr[5];\n   printf(\"%d\", sizeof(arr));\n   return 0;\n}\n```\n",
+      "choices": ["5", "20", "4", "Compiler error"],
+      "correctAnswer": "20"
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int arr[5] = {1, 2, 3, 4, 5};\n   int *p = &arr[1];\n   printf(\"%d\", *(p + 2));\n   return 0;\n}\n```\n",
+      "choices": ["1", "2", "3", "4"],
+      "correctAnswer": "4"
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   char str[] = \"Hello World!\";\n   printf(\"%c\", str[5]);\n   return 0;\n}\n```\n",
+      "choices": ["H", "W", "o", " "],
+      "correctAnswer": " "
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 5;\n   printf(\"%d\", x++ + x++);\n   return 0;\n}\n```\n",
+      "choices": ["10", "11", "12", "Compiler error"],
+      "correctAnswer": "11"
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 10;\n   int y = 20;\n   int z = x > y ? x : y;\n   printf(\"%d\", z);\n   return 0;\n}\n```\n",
+      "choices": ["10", "20", "30", "Compiler error"],
+      "correctAnswer": "20"
+    },
+    {
+      "question": "Which of the following is NOT a storage class specifier in C?",
+      "choices": ["auto", "extern", "register", "local"],
+      "correctAnswer": "local"
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nvoid func(int x) {\n   printf(\"%d\", x);\n}\n\nint main() {\n   func(10);\n   return 0;\n}\n```\n",
+      "choices": ["10", "0", "Undefined behavior", "Compiler error"],
+      "correctAnswer": "10"
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 5;\n   int y = 2;\n   printf(\"%d\", x / y);\n   return 0;\n}\n```\n",
+      "choices": ["2", "2.5", "2.0", "Compiler error"],
+      "correctAnswer": "2"
+    },
+    {
+      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 3;\n   printf(\"%d\", x++ + ++x);\n   return 0;\n}\n```\n",
+      "choices": ["7", "8", "9", "Compiler error"],
+      "correctAnswer": "8"
+    }
+  ]
+},
+
+  "html": {
+  "easy": [
+    {
+      "question": "What does HTML stand for?",
+      "choices": [
+        "Hyperlink and Text Markup Language",
+        "Home Tool Markup Language",
+        "Hyper Text Markup Language",
+        "Hyper Tool Markup Language"
+      ],
+      "correctAnswer": "Hyper Text Markup Language"
+    },
+    {
+      "question": "What is the correct HTML tag for the largest heading?",
+      "choices": ["<h1>", "<h6>", "<head>", "<heading>"],
+      "correctAnswer": "<h1>"
+    },
+    {
+      "question": "Which HTML attribute is used to define inline styles?",
+      "choices": ["style", "class", "id", "font"],
+      "correctAnswer": "style"
+    },
+    {
+      "question": "Which HTML tag is used to define an unordered list?",
+      "choices": ["<ul>", "<ol>", "<li>", "<list>"],
+      "correctAnswer": "<ul>"
+    },
+    {
+      "question": "What is the correct HTML tag for inserting a line break?",
+      "choices": ["<br>", "<break>", "<lb>", "<newline>"],
+      "correctAnswer": "<br>"
+    }
+  ],
+  "normal": [
+    {
+      "question": "Which attribute specifies an alternate text for an image if the image cannot be displayed?",
+      "choices": ["alt", "src", "title", "href"],
+      "correctAnswer": "alt"
+    },
+    {
+      "question": "Which HTML tag is used to define a table row?",
+      "choices": ["<tr>", "<td>", "<th>", "<table-row>"],
+      "correctAnswer": "<tr>"
+    },
+    {
+      "question": "What does the HTML acronym CSS stand for?",
+      "choices": [
+        "Cascading Style Sheet",
+        "Creative Style System",
+        "Colorful Style Sheet",
+        "Computer Style Sheet"
+      ],
+      "correctAnswer": "Cascading Style Sheet"
+    },
+    {
+      "question": "Which HTML tag is used to define a hyperlink?",
+      "choices": ["<a>", "<link>", "<href>", "<hyperlink>"],
+      "correctAnswer": "<a>"
+    },
+    {
+      "question": "Which attribute is used to specify a target URL for a hyperlink?",
+      "choices": ["href", "src", "link", "target"],
+      "correctAnswer": "href"
+    }
+  ],
+  "hard": [
+    {
+      "question": "Which HTML tag is used to define a section of an HTML document?",
+      "choices": ["<section>", "<div>", "<article>", "<span>"],
+      "correctAnswer": "<section>"
+    },
+    {
+      "question": "Which element is used to define the document's header section?",
+      "choices": ["<header>", "<head>", "<h1>", "<top>"],
+      "correctAnswer": "<head>"
+    },
+    {
+      "question": "What is the correct way to add an external JavaScript file to an HTML document?",
+      "choices": [
+        "<script src=\"script.js\"></script>",
+        "<javascript src=\"script.js\"></javascript>",
+        "<js src=\"script.js\"></js>",
+        "<include src=\"script.js\"></include>"
+      ],
+      "correctAnswer": "<script src=\"script.js\"></script>"
+    },
+    {
+      "question": "Which HTML tag is used to define a form?",
+      "choices": ["<form>", "<input>", "<button>", "<label>"],
+      "correctAnswer": "<form>"
+    },
+    {
+      "question": "What is the correct HTML tag for the smallest heading?",
+      "choices": ["<h6>", "<h1>", "<head>", "<h7>"],
+      "correctAnswer": "<h6>"
+    }
+  ],
+},
+
+
+"c++": {
+  "easy": [
+    {
+      "question": "Which of the following is the correct way to include the <iostream> library in C++?",
+      "choices": ["<iostream>", "<stdlib.h>", "<iostream.h>", "<stdio.h>"],
+      "correctAnswer": "<iostream>"
+    },
+    {
+      "question": "What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n  int x = 5;\n  std::cout << x;\n  return 0;\n}",
+      "choices": ["5", "x", "std::cout", "Compilation error"],
+      "correctAnswer": "5"
+    },
+    {
+      "question": "Which operator is used for the modulus division in C++?",
+      "choices": ["%", "/", "*", "^"],
+      "correctAnswer": "%"
+    },
+    {
+      "question": "What is the result of the following expression in C++?\n\n7 / 2",
+      "choices": ["3", "3.5", "3.0", "2"],
+      "correctAnswer": "3"
+    },
+    {
+      "question": "Which keyword is used to declare a variable in C++?",
+      "choices": ["var", "int", "variable", "declare"],
+      "correctAnswer": "int"
+    }
+  ],
+  "normal": [
+    {
+      "question": "Which of the following is the correct way to declare a constant in C++?",
+      "choices": ["const", "#define", "constexpr", "constant"],
+      "correctAnswer": "const"
+    },
+    {
+      "question": "What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n  int x = 2;\n  x *= 3;\n  std::cout << x;\n  return 0;\n}",
+      "choices": ["2", "3", "6", "Compilation error"],
+      "correctAnswer": "6"
+    },
+    {
+      "question": "Which data type is used to store a single character in C++?",
+      "choices": ["char", "int", "string", "float"],
+      "correctAnswer": "char"
+    },
+    {
+      "question": "What is the result of the following expression in C++?\n\n3 + 2 * 4",
+      "choices": ["11", "20", "9", "14"],
+      "correctAnswer": "11"
+    },
+    {
+      "question": "Which operator is used for logical AND in C++?",
+      "choices": ["&&", "&", "||", "|"],
+      "correctAnswer": "&&"
+    }
+  ],
+  "hard": [
+    {
+      "question": "What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n  int x = 10;\n  std::cout << ++x;\n  return 0;\n}",
+      "choices": ["9", "10", "11", "Compilation error"],
+      "correctAnswer": "11"
+    },
+    {
+      "question": "What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n  int x = 5;\n  std::cout << x++;\n  return 0;\n}",
+      "choices": ["5", "6", "0", "Compilation error"],
+      "correctAnswer": "5"
+    },
+    {
+      "question": "Which operator is used for string concatenation in C++?",
+      "choices": ["+", "*", "/", "-"],
+      "correctAnswer": "+"
+    },
+    {
+      "question": "Which library is used for input and output operations in C++?",
+      "choices": ["<iostream>", "<stdlib.h>", "<fstream>", "<iomanip>"],
+      "correctAnswer": "<iostream>"
+    },
+    {
+      "question": "What is the result of the following expression in C++?\n\n10 / 3",
+      "choices": ["3", "3.33", "3.0", "3.333"],
+      "correctAnswer": "3"
+    }
+  ],
+},
+
+
+
+  "js": {
+  "easy": [
+    {
+      "question": "Which keyword is used to declare a variable in JavaScript?",
+      "choices": ["var", "int", "variable", "declare"],
+      "correctAnswer": "var"
+    },
+    {
+      "question": "What is the output of the following code?\n\nconsole.log(5 > 3);",
+      "choices": ["true", "false", "undefined", "NaN"],
+      "correctAnswer": "true"
+    },
+    {
+      "question": "What is the correct way to write a comment in JavaScript?",
+      "choices": ["// This is a comment", "/* This is a comment */", "<!-- This is a comment -->", "# This is a comment"],
+      "correctAnswer": "// This is a comment"
+    },
+    {
+      "question": "Which built-in method returns the length of a string?",
+      "choices": ["length()", "size()", "count()", "getLength()"],
+      "correctAnswer": "length()"
+    },
+    {
+      "question": "Which operator is used to concatenate strings in JavaScript?",
+      "choices": ["+", "*", "-", "/"],
+      "correctAnswer": "+"
+    }
+  ],
+  "normal": [
+    {
+      "question": "What is the output of the following code?\n\nconsole.log(typeof 42);",
+      "choices": ["number", "string", "boolean", "undefined"],
+      "correctAnswer": "number"
+    },
+    {
+      "question": "Which method is used to remove the last element from an array in JavaScript?",
+      "choices": ["pop()", "shift()", "remove()", "delete()"],
+      "correctAnswer": "pop()"
+    },
+    {
+      "question": "What is the purpose of the 'this' keyword in JavaScript?",
+      "choices": [
+        "It refers to the current object",
+        "It refers to the previous object",
+        "It refers to the next object",
+        "It refers to the global object"
+      ],
+      "correctAnswer": "It refers to the current object"
+    },
+    {
+      "question": "Which function is used to convert a string to an integer in JavaScript?",
+      "choices": ["parseInt()", "toString()", "parseFloat()", "toFixed()"],
+      "correctAnswer": "parseInt()"
+    },
+    {
+      "question": "What is the output of the following code?\n\nconsole.log(3 === '3');",
+      "choices": ["true", "false", "undefined", "NaN"],
+      "correctAnswer": "false"
+    }
+  ],
+  "hard": [
+    {
+      "question": "What will be the output of the following JavaScript code?\n\nconsole.log(2 + '2');",
+      "choices": ["4", "22", "TypeError", "NaN"],
+      "correctAnswer": "22"
+    },
+    {
+      "question": "What is the output of the following code?\n\nconsole.log(typeof NaN);",
+      "choices": ["number", "string", "undefined", "NaN"],
+      "correctAnswer": "number"
+    },
+    {
+      "question": "What is the purpose of the 'use strict' directive in JavaScript?",
+      "choices": [
+        "It enforces stricter parsing and error handling",
+        "It enables additional language features",
+        "It disables strict mode",
+        "It improves performance"
+      ],
+      "correctAnswer": "It enforces stricter parsing and error handling"
+    },
+    {
+      "question": "Which method is used to add new elements to the beginning of an array in JavaScript?",
+      "choices": ["unshift()", "push()", "add()", "insert()"],
+      "correctAnswer": "unshift()"
+    },
+    {
+      "question": "What is the output of the following code?\n\nconsole.log(5 + true);",
+      "choices": ["6", "5", "TypeError", "NaN"],
+      "correctAnswer": "6"
+    }
+  ],
+},
+
+  "java": {
+  "easy": [
+    {
+      "question": "Which keyword is used to define a class in Java?",
+      "choices": ["class", "public", "void", "new"],
+      "correctAnswer": "class"
+    },
+    {
+      "question": "What is the output of the following code?\n\nint x = 10;\nint y = 5;\nSystem.out.println(x + y);",
+      "choices": ["10", "5", "15", "Compilation error"],
+      "correctAnswer": "15"
+    },
+    {
+      "question": "Which data type is used to store a single character in Java?",
+      "choices": ["char", "string", "int", "boolean"],
+      "correctAnswer": "char"
+    },
+    {
+      "question": "Which operator is used for logical AND in Java?",
+      "choices": ["&&", "||", "!", "&"],
+      "correctAnswer": "&&"
+    },
+    {
+      "question": "What is the default value of an uninitialized numeric variable in Java?",
+      "choices": ["0", "1", "null", "NaN"],
+      "correctAnswer": "0"
+    }
+  ],
+  "normal": [
+    {
+      "question": "Which keyword is used to define a method that does not return a value in Java?",
+      "choices": ["void", "null", "return", "int"],
+      "correctAnswer": "void"
+    },
+    {
+      "question": "What is the output of the following code?\n\nString name = \"John\";\nSystem.out.println(name.length());",
+      "choices": ["4", "0", "5", "Compilation error"],
+      "correctAnswer": "4"
+    },
+    {
+      "question": "Which data structure in Java is used to store elements in key-value pairs?",
+      "choices": ["HashMap", "ArrayList", "LinkedList", "HashSet"],
+      "correctAnswer": "HashMap"
+    },
+    {
+      "question": "What is the purpose of the 'static' keyword in Java?",
+      "choices": [
+        "It allows a variable or method to be accessed without an instance of the class",
+        "It indicates that a class cannot be subclassed",
+        "It is used to declare a constant",
+        "It specifies the access level of a class"
+      ],
+      "correctAnswer": "It allows a variable or method to be accessed without an instance of the class"
+    },
+    {
+      "question": "Which control structure is used to execute a block of code repeatedly as long as a condition is true in Java?",
+      "choices": ["while loop", "for loop", "if statement", "switch statement"],
+      "correctAnswer": "while loop"
+    }
+  ],
+  "hard": [
+    {
+      "question": "What is the output of the following Java code?\n\nint x = 5;\nSystem.out.println(++x);",
+      "choices": ["4", "5", "6", "Compilation error"],
+      "correctAnswer": "6"
+    },
+    {
+      "question": "What is the output of the following code?\n\nString str = \"Hello\";\nstr.concat(\" World!\");\nSystem.out.println(str);",
+      "choices": ["Hello", "World!", "Hello World!", "Compilation error"],
+      "correctAnswer": "Hello"
+    },
+    {
+      "question": "What is the purpose of the 'finally' block in a try-catch-finally statement in Java?",
+      "choices": [
+        "It is executed regardless of whether an exception is thrown or caught",
+        "It is executed only if an exception is thrown",
+        "It is executed only if an exception is caught",
+        "It is used to specify the code to be executed in case of an exception"
+      ],
+      "correctAnswer": "It is executed regardless of whether an exception is thrown or caught"
+    },
+    {
+      "question": "Which method is used to convert a string to an integer in Java?",
+      "choices": ["Integer.parseInt()", "toString()", "Float.parseFloat()", "Math.round()"],
+      "correctAnswer": "Integer.parseInt()"
+    },
+    {
+      "question": "What is the output of the following code?\n\nSystem.out.println(Math.floor(2.99));",
+      "choices": ["2", "3", "2.0", "3.0"],
+      "correctAnswer": "2.0"
+    }
+  ],
+},
+
+  "python": {
+  "easy": [
+    {
+      "question": "Which of the following is the correct way to comment in Python?",
+      "choices": ["// This is a comment", "# This is a comment", "/* This is a comment */", "<!-- This is a comment -->"],
+      "correctAnswer": "# This is a comment"
+    },
+    {
+      "question": "What is the output of the following code?\n\nx = 5\ny = 3\nprint(x + y)",
+      "choices": ["2", "5", "8", "15"],
+      "correctAnswer": "8"
+    },
+    {
+      "question": "Which data type is used to store a sequence of characters in Python?",
+      "choices": ["string", "int", "float", "boolean"],
+      "correctAnswer": "string"
+    },
+    {
+      "question": "What is the result of the following expression in Python?\n\n5 * 2 + 3",
+      "choices": ["10", "11", "13", "15"],
+      "correctAnswer": "13"
+    },
+    {
+      "question": "Which operator is used for exponentiation in Python?",
+      "choices": ["**", "//", "%", "++"],
+      "correctAnswer": "**"
+    }
+  ],
+  "normal": [
+    {
+      "question": "Which function is used to get the length of a list in Python?",
+      "choices": ["len()", "size()", "length()", "count()"],
+      "correctAnswer": "len()"
+    },
+    {
+      "question": "What is the output of the following code?\n\nfruits = ['apple', 'banana', 'cherry']\nprint(fruits[1])",
+      "choices": ["apple", "banana", "cherry", "SyntaxError"],
+      "correctAnswer": "banana"
+    },
+    {
+      "question": "Which method is used to convert a string to lowercase in Python?",
+      "choices": ["lower()", "capitalize()", "upper()", "swapcase()"],
+      "correctAnswer": "lower()"
+    },
+    {
+      "question": "What is the result of the following expression in Python?\n\n12 / 5",
+      "choices": ["2.4", "2.5", "2", "2.0"],
+      "correctAnswer": "2.4"
+    },
+    {
+      "question": "Which operator is used for floor division in Python?",
+      "choices": ["/", "//", "%", "**"],
+      "correctAnswer": "//"
+    }
+  ],
+  "hard": [
+    {
+      "question": "What is the output of the following Python code?\n\nx = 10\ny = 5\nprint(x % y)",
+      "choices": ["2", "5", "10", "0"],
+      "correctAnswer": "0"
+    },
+    {
+      "question": "What is the output of the following code?\n\nnums = [1, 2, 3]\nnums.append([4, 5])\nprint(len(nums))",
+      "choices": ["3", "4", "5", "6"],
+      "correctAnswer": "4"
+    },
+    {
+      "question": "Which method is used to remove whitespace from both ends of a string in Python?",
+      "choices": ["strip()", "trim()", "rstrip()", "lstrip()"],
+      "correctAnswer": "strip()"
+    },
+    {
+      "question": "What is the result of the following expression in Python?\n\n3 + 2 * 4",
+      "choices": ["9", "14", "20", "11"],
+      "correctAnswer": "11"
+    },
+    {
+      "question": "Which operator is used for string concatenation in Python?",
+      "choices": ["+", "*", "/", "-"],
+      "correctAnswer": "+"
+    }
+  ],
+}
+
 };
 
 
