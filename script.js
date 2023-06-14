@@ -25,7 +25,7 @@ const quizData = {
     
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 10;\n   printf(\"%d\", x++);\n   return 0;\n}\n```\n",
-      "choices": ["9", "10", "11", ],
+      "choices": ["9", "10", "11","12" ],
       "correctAnswer": "10"
     },
     
@@ -45,7 +45,7 @@ const quizData = {
    
     {
       "question": "What is the result of the following expression in C?\n\n```c\n3 + 5 * 2 - 4 / 2\n```\n",
-      "choices": ["6", "10", "7"],
+      "choices": ["6", "10", "9","7"],
       "correctAnswer": "10"
     },
     {
@@ -56,7 +56,7 @@ const quizData = {
     
     {
       "question": "Which of the following statements is used to terminate a loop in C?",
-      "choices": ["break", "stop", "exit", "terminate"],
+      "choices": ["break", "stop", "exit", ],
       "correctAnswer": "break"
     },
    
@@ -75,17 +75,17 @@ const quizData = {
     },
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int arr[5] = {1, 2, 3, 4, 5};\n   int *p = &arr[1];\n   printf(\"%d\", *(p + 2));\n   return 0;\n}\n```\n",
-      "choices": ["1", "2", "3"],
+      "choices": ["1", "2", "4","3",],
       "correctAnswer": "4"
     },
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   char str[] = \"Hello World!\";\n   printf(\"%c\", str[5]);\n   return 0;\n}\n```\n",
-      "choices": ["H", "o", " "],
+      "choices": ["H", "Error", " "],
       "correctAnswer": " "
     },
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 5;\n   printf(\"%d\", x++ + x++);\n   return 0;\n}\n```\n",
-      "choices": ["10", "11", "12", ],
+      "choices": ["10", "11", "Error", ],
       "correctAnswer": "11"
     },
     
@@ -98,7 +98,8 @@ const quizData = {
       "question": "What does HTML stand for?",
       "choices": [
         "Hyperlink and Text Markup Language",
-        "Home Tool Markup Language",
+        "Home Tool Markup Language\n",
+
         "Hyper Text Markup Language",
         "Hyper Tool Markup Language"
       ],
