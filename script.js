@@ -9,7 +9,7 @@ const quizData = {
     },
     {
       "question": "What is the keyword used to define a constant in C?",
-      "choices": ["final", "const", "constant", "define"],
+      "choices": ["final", "const",  "define"],
       "correctAnswer": "const"
     },
     {
@@ -22,140 +22,73 @@ const quizData = {
       "choices": [".c", ".cpp", ".h", ".txt"],
       "correctAnswer": ".c"
     },
-    {
-      "question": "Which function is used to read a character from the standard input in C?",
-      "choices": ["fscanf", "scanf", "getchar", "read"],
-      "correctAnswer": "getchar"
-    },
+    
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 10;\n   printf(\"%d\", x++);\n   return 0;\n}\n```\n",
-      "choices": ["9", "10", "11", "Compiler error"],
+      "choices": ["9", "10", "11", ],
       "correctAnswer": "10"
     },
-    {
-      "question": "Which operator is used to access the value at a specific memory address in C?",
-      "choices": ["&", "*", "#", "$"],
-      "correctAnswer": "*"
-    },
-    {
-      "question": "What is the correct way to declare an integer variable named 'num' in C?",
-      "choices": ["integer num;", "int num;", "num as integer;", "var num as int;"],
-      "correctAnswer": "int num;"
-    },
-    {
-      "question": "Which header file is required to work with file I/O operations in C?",
-      "choices": ["<io.h>", "<file.h>", "<stdio.h>", "<iostream.h>"],
-      "correctAnswer": "<stdio.h>"
-    },
-    {
-      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   float x = 3.5;\n   printf(\"%d\", (int)x);\n   return 0;\n}\n```\n",
-      "choices": ["3.5", "3", "4", "Compiler error"],
-      "correctAnswer": "3"
-    }
+    
   ],
   "normal": [
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 5;\n   int *p = &x;\n   printf(\"%d\", *p);\n   return 0;\n}\n```\n",
-      "choices": ["5", "0", "Garbage value", "Compiler error"],
+      "choices": ["5", "0", "Garbage value"],
       "correctAnswer": "5"
     },
-    {
-      "question": "What does the 'sizeof' operator in C return?",
-      "choices": ["The size of the variable in bytes", "The size of the variable in bits", "The size of the variable in characters", "The address of the variable"],
-      "correctAnswer": "The size of the variable in bytes"
-    },
+    
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int arr[] = {1, 2, 3, 4, 5};\n   printf(\"%d\", *(arr + 2));\n   return 0;\n}\n```\n",
       "choices": ["1", "2", "3", "4"],
       "correctAnswer": "3"
     },
-    {
-      "question": "What is the correct way to declare a pointer to a function in C?",
-      "choices": ["int *func()", "int (*func)()", "int *func", "int func()"],
-      "correctAnswer": "int (*func)()"
-    },
+   
     {
       "question": "What is the result of the following expression in C?\n\n```c\n3 + 5 * 2 - 4 / 2\n```\n",
-      "choices": ["6", "10", "7", "8"],
+      "choices": ["6", "10", "7"],
       "correctAnswer": "10"
     },
     {
       "question": "Which of the following is NOT a valid data type in C?",
-      "choices": ["float", "boolean", "char", "double"],
+      "choices": ["float", "boolean", "char",],
       "correctAnswer": "boolean"
     },
-    {
-      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 10;\n   if (x > 5)\n       printf(\"Hello\");\n   else if (x > 2)\n       printf(\"World\");\n   else\n       printf(\"!\");\n   return 0;\n}\n```\n",
-      "choices": ["Hello", "World", "!", "Hello World"],
-      "correctAnswer": "Hello"
-    },
+    
     {
       "question": "Which of the following statements is used to terminate a loop in C?",
       "choices": ["break", "stop", "exit", "terminate"],
       "correctAnswer": "break"
     },
-    {
-      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 0;\n   while (x < 5) {\n       printf(\"%d\", x);\n       x++;\n   }\n   return 0;\n}\n```\n",
-      "choices": ["0 1 2 3 4", "0 1 2 3 4 5", "1 2 3 4 5", "Compiler error"],
-      "correctAnswer": "0 1 2 3 4"
-    },
-    {
-      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   for (int i = 0; i < 5; i++) {\n       if (i == 3)\n           continue;\n       printf(\"%d\", i);\n   }\n   return 0;\n}\n```\n",
-      "choices": ["0 1 2 3 4", "0 1 2 4", "1 2 3 4", "Compiler error"],
-      "correctAnswer": "0 1 2 4"
-    }
+   
+    
   ],
   "hard": [
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 10;\n   int *p = &x;\n   printf(\"%d\", *p++);\n   return 0;\n}\n```\n",
-      "choices": ["10", "11", "Compiler error", "Undefined behavior"],
+      "choices": ["10", "11", "Compiler error"],
       "correctAnswer": "10"
     },
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int arr[5];\n   printf(\"%d\", sizeof(arr));\n   return 0;\n}\n```\n",
-      "choices": ["5", "20", "4", "Compiler error"],
+      "choices": ["5", "20", "4", ],
       "correctAnswer": "20"
     },
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int arr[5] = {1, 2, 3, 4, 5};\n   int *p = &arr[1];\n   printf(\"%d\", *(p + 2));\n   return 0;\n}\n```\n",
-      "choices": ["1", "2", "3", "4"],
+      "choices": ["1", "2", "3"],
       "correctAnswer": "4"
     },
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   char str[] = \"Hello World!\";\n   printf(\"%c\", str[5]);\n   return 0;\n}\n```\n",
-      "choices": ["H", "W", "o", " "],
+      "choices": ["H", "o", " "],
       "correctAnswer": " "
     },
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 5;\n   printf(\"%d\", x++ + x++);\n   return 0;\n}\n```\n",
-      "choices": ["10", "11", "12", "Compiler error"],
+      "choices": ["10", "11", "12", ],
       "correctAnswer": "11"
     },
-    {
-      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 10;\n   int y = 20;\n   int z = x > y ? x : y;\n   printf(\"%d\", z);\n   return 0;\n}\n```\n",
-      "choices": ["10", "20", "30", "Compiler error"],
-      "correctAnswer": "20"
-    },
-    {
-      "question": "Which of the following is NOT a storage class specifier in C?",
-      "choices": ["auto", "extern", "register", "local"],
-      "correctAnswer": "local"
-    },
-    {
-      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nvoid func(int x) {\n   printf(\"%d\", x);\n}\n\nint main() {\n   func(10);\n   return 0;\n}\n```\n",
-      "choices": ["10", "0", "Undefined behavior", "Compiler error"],
-      "correctAnswer": "10"
-    },
-    {
-      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 5;\n   int y = 2;\n   printf(\"%d\", x / y);\n   return 0;\n}\n```\n",
-      "choices": ["2", "2.5", "2.0", "Compiler error"],
-      "correctAnswer": "2"
-    },
-    {
-      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 3;\n   printf(\"%d\", x++ + ++x);\n   return 0;\n}\n```\n",
-      "choices": ["7", "8", "9", "Compiler error"],
-      "correctAnswer": "8"
-    }
+    
   ]
 },
 
