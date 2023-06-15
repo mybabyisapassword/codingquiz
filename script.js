@@ -45,18 +45,18 @@ const quizData = {
    
     {
       "question": "What is the result of the following expression in C?\n\n```c\n3 + 5 * 2 - 4 / 2\n```\n",
-      "choices": ["6", "10", "9","7"],
+      "choices": ["6", "10", "9", "7"],
       "correctAnswer": "10"
     },
     {
       "question": "Which of the following is NOT a valid data type in C?",
-      "choices": ["float", "boolean", "char",],
+      "choices": ["float", "boolean", "char"],
       "correctAnswer": "boolean"
     },
     
     {
       "question": "Which of the following statements is used to terminate a loop in C?",
-      "choices": ["break", "stop", "exit", ],
+      "choices": ["break", "stop", "exit" ],
       "correctAnswer": "break"
     },
    
@@ -70,12 +70,12 @@ const quizData = {
     },
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int arr[5];\n   printf(\"%d\", sizeof(arr));\n   return 0;\n}\n```\n",
-      "choices": ["5", "20", "4", ],
+      "choices": ["5", "20", "4" ],
       "correctAnswer": "20"
     },
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int arr[5] = {1, 2, 3, 4, 5};\n   int *p = &arr[1];\n   printf(\"%d\", *(p + 2));\n   return 0;\n}\n```\n",
-      "choices": ["1", "2", "4","3",],
+      "choices": ["1", "2", "4","3"],
       "correctAnswer": "4"
     },
     {
@@ -85,7 +85,7 @@ const quizData = {
     },
     {
       "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 5;\n   printf(\"%d\", x++ + x++);\n   return 0;\n}\n```\n",
-      "choices": ["10", "11", "Error", ],
+      "choices": ["10", "11", "Error" ],
       "correctAnswer": "11"
     },
     
@@ -155,7 +155,7 @@ const quizData = {
     },
     {
       "question": "What is the output of the following code?\n\n#include <iostream>\n\nint main() {\n  int x = 5;\n  std::cout << x;\n  return 0;\n}",
-      "choices": ["5", "x", "std::cout", "Compilation error"],
+      "choices": ["5", "x", "std::cout"],
       "correctAnswer": "5"
     },
     {
@@ -233,7 +233,7 @@ const quizData = {
 
 
   "js": {
-  "easy": [
+      "easy": [
     {
       "question": "Which keyword is used to declare a variable in JavaScript?",
       "choices": ["var", "int", "variable"],
@@ -254,7 +254,7 @@ const quizData = {
       "question": "Which operator is used to concatenate strings in JavaScript?",
       "choices": ["+", "*", "-", "/"],
       "correctAnswer": "+"
-    }
+    },
   ],
   "normal": [
     {
@@ -267,7 +267,7 @@ const quizData = {
       "choices": ["pop()", "shift()", "remove()"],
       "correctAnswer": "pop()"
     },
-    {
+    
     
     {
       "question": "Which function is used to convert a string to an integer in JavaScript?",
@@ -278,7 +278,7 @@ const quizData = {
       "question": "What is the output of the following code?\n\nconsole.log(3 === '3');",
       "choices": ["true", "false", "NaN"],
       "correctAnswer": "false"
-    }
+    },
   ],
   "hard": [
     {
@@ -299,11 +299,11 @@ const quizData = {
     },
     {
       "question": "What is the output of the following code?\n\nconsole.log(5 + true);",
-      "choices": ["6", "5", "TypeError", ],
+      "choices": ["6", "5", "TypeError" ],
       "correctAnswer": "6"
     }
   ],
-},
+},  
 
   "java": {
   "easy": [
