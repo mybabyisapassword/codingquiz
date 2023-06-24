@@ -2,64 +2,104 @@ const quizData = {
   "c": {
   "easy": [
     {
-      "question": "#include <stdio.h>\n\nint main() {\n   printf(\"Hello World!\");\n   return 0;\n}\n\nWhat is the correct answer?",
-      "choices": ["^", "<", "*", "="],
-      "correctAnswer": "<",
-      "output": "Hello World!"
-    },
-    {
-      "question": "What is the keyword used to define a constant in C?",
-      "choices": ["final", "const",  "define"],
-      "correctAnswer": "const"
-    },
-    {
-      "question": "Which symbol is used to denote a single-line comment in C?",
-      "choices": ["//", "/*", "##", "--"],
-      "correctAnswer": "//"
-    },
-    {
-      "question": "What is the extension of C source code files?",
-      "choices": [".c", ".cpp", ".h", ".txt"],
-      "correctAnswer": ".c"
-    },
-    
-    {
-      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 10;\n   printf(\"%d\", x++);\n   return 0;\n}\n```\n",
-      "choices": ["9", "10", "11","12" ],
-      "correctAnswer": "10"
-    },
+    "question": "1.\n#include <stdio.h> \n __ main() { \n  printf(\"Hello World!\"); \n return 0; }\n\nCorrect answer:",
+    "choices": ["^", "<", "*", "="],
+    "correctAnswer": "<",
+    "output": "Hello World!"
+  },
+  {
+    "question": "2.\n#include <stdio.h> \n int main() { \n  printf(\"Hello students!\"); \n  printf(\"Im here to teach C programming.\"); \n return 0; }\n\nCorrect answer:",
+    "choices": ["+", ";","int"],
+    "correctAnswer": "+",
+    "output": "Hello students!Im here to teach C programming."
+  },
+  {
+    "question": "3.\n#include <stdio.h>\nint main() {\n  printf(\"Hello Teacher!____\");\n  printf(\"I am learning C.\\nAnd it is awesome!\");\n  return 0;\n}\n\nCorrect answer:",
+    "choices": ["\\m", "\\n", "And"],
+    "correctAnswer": "\\n",
+    "output": "Hello Teacher!\nI am learning C.\nAnd it is awesome!"
+  },
+  {
+    "question": "4.\n#include <stdio.h>\nint main() {\n  int myNum = 15;\n  printf(\"%d\", myNum);\n  return 0;\n}\n\nCorrect answer:",
+    "choices": ["%", "$", "&"],
+    "correctAnswer": "%",
+    "output": "15"
+  },
+  {
+    "question": "5.\n#include <stdio.h>\nint main() {\n  float my__Num = 3.5;\n  double myDoubleNum = 19.99;\n  printf(\"%f\\n\", myFloatNum);\n  printf(\"%If\", myDoubleNum);\n  return 0;\n}\n\nCorrect answer:",
+    "choices": ["Loaf", "Float", "Cokefloat"],
+    "correctAnswer": "Float",
+    "output": "3.500000\n19.990000"
+  },
+  {
+    "question": "6.\n#include <stdio.h>\nint main() {\n  int x = 5;\n  ______= 2;\n  int sum = 5 / 2;\n  printf(\"%d\", sum);\n  return 0;\n}\n\nCorrect answer:",
+    "choices": ["int y", "printf", "int y\nPrint y"],
+    "correctAnswer": "int y",
+    "output": "2"
+  },
+  {
+    "question": "7.\n____#include <stdio.h>\nint main() {\n  int myNum = 100 + 50;\n  printf(\"%d\", myNum);\n  return 0;\n}\n\nCorrect answer:",
+    "choices": ["%", "+", "#"],
+    "correctAnswer": "#",
+    "output": "150"
+  },
+  {
+    "question": "8.\n#include <stdio.h>\nint main() {\n  printf(\"%d\", 10 > 9); \n // ______ 1 (true) because 10 is greater than 9\n  return 0;\n}\n\nCorrect answer:",
+    "choices": ["1", "Returns", "true"],
+    "correctAnswer": "Returns",
+    "output": "1"
+  },
+  {
+    "question": "9.\n#include <stdio.h>\nint main() {\n  if (20 > 18) {\n    ______(\"20 is greater than 18\");\n  }\n  return 0;\n}\n\nCorrect answer:",
+    "choices": ["printf", "Println", "int main"],
+    "correctAnswer": "printf",
+    "output": "20 is greater than 18"
+  },
+  {
+    "question": "10.\n#include <stdio.h>\nint main() {\n  short a;\n  long b;\n\n\n  printf(\"1.a)______ of short = %d bytes\\n\", sizeof(a));\n  printf(\"size of long = %d 1.b)______\\n\", sizeof(b));\n  return 0;\n}\n\nCorrect answer:\n",
+    "choices": ["A.)\nSIZE\nsize\nSeize", "B.)\nbytes\nBits\nBeats"],
+    "correctAnswer": "A.)\nSIZE\nsize\nSeize\nB.)\nbytes\nBits\nBeats",
+    "output": "size of short = 2 bytes\nsize of long = 8 bytes"
+  },
     
   ],
   "normal": [
-    {
-      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int x = 5;\n   int *p = &x;\n   printf(\"%d\", *p);\n   return 0;\n}\n```\n",
-      "choices": ["5", "0", "Garbage value"],
-      "correctAnswer": "5"
-    },
-    
-    {
-      "question": "What is the output of the following code?\n\n```c\n#include <stdio.h>\n\nint main() {\n   int arr[] = {1, 2, 3, 4, 5};\n   printf(\"%d\", *(arr + 2));\n   return 0;\n}\n```\n",
-      "choices": ["1", "2", "3", "4"],
-      "correctAnswer": "3"
-    },
-   
-    {
-      "question": "What is the result of the following expression in C?\n\n```c\n3 + 5 * 2 - 4 / 2\n```\n",
-      "choices": ["6", "10", "9", "7"],
-      "correctAnswer": "10"
-    },
-    {
-      "question": "Which of the following is NOT a valid data type in C?",
-      "choices": ["float", "boolean", "char"],
-      "correctAnswer": "boolean"
-    },
-    
-    {
-      "question": "Which of the following statements is used to terminate a loop in C?",
-      "choices": ["break", "stop", "exit" ],
-      "correctAnswer": "break"
-    },
-   
+   {
+    "question": "1.\n#include <stdio.h>\nint main() 1.b)__\n  int 1.a)______ 15;\n  printf(\"%d\", myNum);\n  return 0;\n}\n\nCorrect answer\nmyNum =",
+    "choices": ["A.)\nMynum≠", "myNum =", "mynumber -"],
+    "correctAnswer": "myNum =",
+    "output": "15"
+  },
+  {
+    "question": "2.\n#include <stdio.h>\nint main() {\n    int number;\n    printf(\"Enter an integer: \");\n    1.a)______(\"%d\", &number);\n    // true if number is less than 0\n    if (number < 0) {\n        printf(\"You entered %d.1.b)______\", number);\n    }\n    printf(\"The if statement is easy.\"); for \n    return 0;\n}\n\nCorrect answer\nscanf\n\\n",
+    "choices": ["A.)\nprintf()", "scanf", "Println()", "B.)\n/N", "\\n", "%d"],
+    "correctAnswer": "scanf",
+    "output": "Enter an integer: 6\nThe if statement is easy."
+  },
+  {
+    "question": "3.\n#include <stdio.h>\nint main() {\n    int number1, number2;\n    printf(\"Enter two integers: \");\n    scanf(\"%d %d\", &number1, &number2);\n\n    if (number1 >= number2) {\n      if (number1 == number2) {\n        printf(\"Result: %d = %d\",number1,number2);\n      }\n      else {\n        printf(\"1.a)____> %d\", number1, number2);\n      }\n    }\n    else {\n        1.b)______(\"Result: %d < %d\",number1, number2);\n    }\n\n    return 0;\n}\n\nCorrect answer\nResult: %d ",
+    "choices": ["A.)\nresult:&d", "Result: %d", "Result", "B.)\nprintf", "println", "Print();"],
+    "correctAnswer": "Result: %d",
+    "output": "Result: 2 < 7"
+  },
+  {
+    "question": "// Print numbers from 1 to 10\n#include <stdio.h>\n\nint main() {\n  1.a)______\n  for (i = 1; i < 11; ++i)\n  {\n    printf(\"1.b)_____ \", i);\n  }\n  return 0;\n}\n\nCorrect answer:\nint i;\n%d",
+    "choices": ["A.)\nInt", "int ;", "int i;", "mint", "B.)\n%d", "%m", "=="],
+    "correctAnswer": "int i;",
+    "output": "1 2 3 4 5 6 7 8 9 10"
+  },
+  {
+    "question": "// Print numbers from 1 to 5\n\n#include <stdio.h>\nint main() {\n  int i = 1;\n    \n  1.a)_____ (i <= 5) {\n    printf(\"%d\\n\", i);\n1.b)_____  }\n\n  return 0;\n}\n\nCorrect answer:\nwhile\n    ++i;",
+    "choices": ["A.)\nWhile", "while", "When", "B.)\nI++:", "++i;", "j==;"],
+    "correctAnswer": "while\n    ++i;",
+    "output": "1\n2\n3\n4\n5"
+  },
+  {
+    "question": "#include <stdio.h>\n\nint main() {\n  int my1.a)______= {25, 50, 75, 100};\n  int i;\n  \n  for (i = 0; i < 4; i++) {\n    printf(\"%d\\n\", 1.b)_______);\n  }\n \n  return 0;\n}\n\nCorrect answer\nNumbers[]",
+    "choices": ["A.)\nnumber()", "Numbers[]", "Num[]", "B.)\nMynumber()", "myNumbers[i]", "Int num()"],
+    "correctAnswer": "Numbers[]",
+    "output": "25\n50\n75\n100"
+  },
     
   ],
   "hard": [
@@ -520,9 +560,9 @@ function showQuestion() {
     choice.value = currentQuestion.choices[i];
 
     choice.style.display = "inline-block"; // Set display to "inline-block" to align buttons horizontally
-    choice.style.marginRight = "10px"; // Add some margin between buttons
-    choice.style.padding = "25px";
-    choice.style.fontSize = "35px";
+    choice.style.marginRight = "15px"; // Add some margin between buttons
+    choice.style.padding = "20px";
+    choice.style.fontSize = "25px";
     choice.style.backgroundColor = "white";
     choice.style.color = "black";
     choice.style.border = "none";
@@ -593,4 +633,3 @@ function endGame() {
     location.reload();
   }, 5000);
 }
-
